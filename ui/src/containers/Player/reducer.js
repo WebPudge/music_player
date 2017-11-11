@@ -2,13 +2,13 @@ import * as PlayerTypes from './constant';
 import { fromJS } from 'immutable';
 
 const PlayerStore = fromJS({
-  number: 0,
+  countNumber: 0,
 });
 
 export default (state = PlayerStore, action) => {
   switch (action.type) {
     case PlayerTypes.COUNT:
-      return state.update('number', () => fromJS(action.number));
+      return state.update('countNumber', () => fromJS(action.countNumber));
     default:
       return state;
   }

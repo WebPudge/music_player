@@ -30,15 +30,15 @@ function mapStateToProps(state: PlayerState) {
   };
 }
 
-function mapDispatchToProps(dispatch: Dispatch<any>) {
+function mapDispatchToProps(dispatch: Dispatch<{}>) {
   return {
-    playerActions: bindActionCreators<any>(actions, dispatch)
+    playerActions: bindActionCreators<{}>(actions, dispatch)
   };
 }
 
-class Player extends React.Component<PlayerPropsClass, any> {
+class Player extends React.Component<PlayerPropsClass, {}> {
   constructor(props: object) {
-    super(props as any);
+    super(props as PlayerPropsClass);
     this.state = {};
   }
 
@@ -47,12 +47,12 @@ class Player extends React.Component<PlayerPropsClass, any> {
   subtractOne = (num: number) => this.props.playerActions.subtract(num);
 
   render() {
-    const { number } = this.props.player.toJS();
+    const { countNumber } = this.props.player.toJS();
     return (
       <div className="player">
-        <span>{number}</span>
-        <button onClick={() => this.addOne(number)}>点击+1</button>
-        <button onClick={() => this.subtractOne(number)}>点击-1</button>
+        <span>{countNumber}</span>
+        <button onClick={() => this.addOne(countNumber)}>点击+1</button>
+        <button onClick={() => this.subtractOne(countNumber)}>点击-1</button>
       </div>
     );
   }
