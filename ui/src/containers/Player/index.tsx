@@ -9,18 +9,6 @@ interface PlayerState {
   PlayerStore: object;
 }
 
-function mapStateToProps(state: PlayerState) {
-  return {
-    player: state.PlayerStore,
-  };
-}
-
-function mapDispatchToProps(dispatch: Dispatch<any>) {
-  return {
-    playerActions: bindActionCreators<any>(actions, dispatch)
-  };
-}
-
 interface PlayerActions {
   count: Function;
   subtract: Function;
@@ -34,6 +22,18 @@ interface PlayerProps {
 export interface PlayerPropsClass {
   player: PlayerProps;
   playerActions: PlayerActions;
+}
+
+function mapStateToProps(state: PlayerState) {
+  return {
+    player: state.PlayerStore,
+  };
+}
+
+function mapDispatchToProps(dispatch: Dispatch<any>) {
+  return {
+    playerActions: bindActionCreators<any>(actions, dispatch)
+  };
 }
 
 class Player extends React.Component<PlayerPropsClass, any> {
