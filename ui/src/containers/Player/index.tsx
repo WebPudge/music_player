@@ -6,7 +6,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 import * as actions from './action';
 
 interface PlayerState {
-  PlayerStore: object,
+  PlayerStore: object;
 }
 
 function mapStateToProps(state: PlayerState) {
@@ -22,18 +22,18 @@ function mapDispatchToProps(dispatch: Dispatch<any>) {
 }
 
 interface PlayerActions {
-  count: Function,
-  subtract: Function
-};
+  count: Function;
+  subtract: Function;
+}
 
 interface PlayerProps {
-  number: Number,
-  toJS: Function
+  number: Number;
+  toJS: Function;
 }
 
 export interface PlayerPropsClass {
-  player: PlayerProps,
-  playerActions: PlayerActions,
+  player: PlayerProps;
+  playerActions: PlayerActions;
 }
 
 class Player extends React.Component<PlayerPropsClass, any> {
