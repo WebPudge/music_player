@@ -1,9 +1,14 @@
 import { combineReducers, createStore } from 'redux';
 import PlayerStore from '../containers/Player/reducer';
+
+export interface AppStoreType {
+  PlayerStore: object;
+}
+
 const rootReducer = combineReducers({
   PlayerStore,
 });
 
-export default initialState => {
-  return createStore(rootReducer, initialState);
+export default () => {
+  return createStore(rootReducer);
 };

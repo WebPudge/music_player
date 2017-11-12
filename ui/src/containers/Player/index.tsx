@@ -4,27 +4,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 // import PropTypes from 'prop-types';
 import * as actions from './action';
+import { PlayerStateType } from './reducer';
+import { AppStoreType } from '../../reducers';
 
-interface PlayerState {
-  PlayerStore: object;
+interface PlayerPropsClass {
+  player: PlayerStateType;
+  playerActions: actions.PlayerActionsTypes;
 }
 
-interface PlayerActions {
-  count: Function;
-  subtract: Function;
-}
-
-interface PlayerProps {
-  number: Number;
-  toJS: Function;
-}
-
-export interface PlayerPropsClass {
-  player: PlayerProps;
-  playerActions: PlayerActions;
-}
-
-function mapStateToProps(state: PlayerState) {
+function mapStateToProps(state: AppStoreType) {
   return {
     player: state.PlayerStore,
   };
@@ -51,8 +39,8 @@ class Player extends React.Component<PlayerPropsClass, {}> {
     return (
       <div className="player">
         <span>{countNumber}</span>
-        <button onClick={() => this.addOne(countNumber)}>点击+1</button>
-        <button onClick={() => this.subtractOne(countNumber)}>点击-1</button>
+        <button onClick={() => this.addOne(countNumber as number)}>点击+1</button>
+        <button onClick={() => this.subtractOne(countNumber as number)}>点击-1</button>
       </div>
     );
   }
