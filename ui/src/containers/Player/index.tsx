@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 // import PropTypes from 'prop-types';
 import * as actions from './action';
-import { PlayerStateType } from './reducer';
+import { PlayerStateTypes } from './reducer';
 import { AppStoreType } from '../../reducers';
+import Demo2Img from './images/demo2.png';
+import WrappedHOC from '../../components/WrappedHOC';
+import Demo from './components/demo';
+import Chart from './components/chart';
 
 interface PlayerPropsClass {
-  player: PlayerStateType;
+  player: PlayerStateTypes;
   playerActions: actions.PlayerActionsTypes;
 }
 
@@ -23,6 +27,15 @@ function mapDispatchToProps(dispatch: Dispatch<{}>) {
     playerActions: bindActionCreators<{}>(actions, dispatch)
   };
 }
+
+const demo2 = () => (
+  <div className="demo2">
+    <img src={Demo2Img} alt="demo2" />
+    赵凌风在这里玩
+  </div>
+);
+
+const Demo2 = WrappedHOC(demo2);
 
 class Player extends React.Component<PlayerPropsClass, {}> {
   constructor(props: object) {
@@ -41,6 +54,10 @@ class Player extends React.Component<PlayerPropsClass, {}> {
         <span>{countNumber}</span>
         <button onClick={() => this.addOne(countNumber as number)}>点击+1</button>
         <button onClick={() => this.subtractOne(countNumber as number)}>点击-1</button>
+        <Demo name={'张泽玮'} />
+        <Demo2 />
+        <Demo name={'贺于鹏'} />
+        <Chart />
       </div>
     );
   }

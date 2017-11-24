@@ -1,0 +1,34 @@
+.player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.demo1 {
+  height: 400px;
+  width: 400px;
+  background: green;
+  color: #fff;
+}
+
+.demo2 {
+  width: 400px;
+  background: red;
+  color: #fff;
+}
+
+.demo2 img {
+  width: 100%; 
+}
+
+.demo3 {
+  height: 400px;
+  width: 400px;
+  background: blue;
+  color: #fff;
+}
+
+.echart-demo {
+  height: 400px;
+  width: 400px;
+}

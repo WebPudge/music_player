@@ -11,9 +11,9 @@ interface StoreType {
   countNumber: number;
 }
 
-export type PlayerStateType = StoreType & ImmutableFuncType;
+export type PlayerStateTypes = StoreType & ImmutableFuncType;
 
-const PlayerStore: PlayerStateType = fromJS({
+const PlayerStore: PlayerStateTypes = fromJS({
   countNumber: 0,
 });
 

@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@types/classnames@^2.2.3":
+  version "2.2.3"
+  resolved "http://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.3.tgz#3f0ff6873da793870e20a260cada55982f38a9e5"
+
+"@types/echarts@^0.0.9":
+  version "0.0.9"
+  resolved "http://registry.npm.taobao.org/@types/echarts/download/@types/echarts-0.0.9.tgz#7930c1d3d096868d6acaa41255b25b120a5fa00e"
+
 "@types/jest@^21.1.5":
   version "21.1.5"
   resolved "http://r.cnpmjs.org/@types/jest/download/@types/jest-21.1.5.tgz#3db93d069d12602ca115d3604550e15131d8eb7a"
@@ -9,6 +17,10 @@
 "@types/node@*", "@types/node@^8.0.51":
   version "8.0.51"
   resolved "http://r.cnpmjs.org/@types/node/download/@types/node-8.0.51.tgz#b31d716fb8d58eeb95c068a039b9b6292817d5fb"
+
+"@types/prop-types@^15.5.2":
+  version "15.5.2"
+  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.2.tgz#3c6b8dceb2906cc87fe4358e809f9d20c8d59be1"
 
 "@types/react-dom@^16.0.3":
   version "16.0.3"
@@ -820,6 +832,10 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+classnames@^2.2.5:
+  version "2.2.5"
+  resolved "http://registry.npm.taobao.org/classnames/download/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@4.1.x:
   version "4.1.9"
   resolved "http://r.cnpmjs.org/clean-css/download/clean-css-4.1.9.tgz#35cee8ae7687a49b98034f70de00c4edd3826301"
@@ -1424,6 +1440,12 @@ ecc-jsbn@~0.1.1:
   resolved "http://r.cnpmjs.org/ecc-jsbn/download/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
+
+echarts@^3.8.5:
+  version "3.8.5"
+  resolved "http://registry.npm.taobao.org/echarts/download/echarts-3.8.5.tgz#58e4a51d2743c6fb75257b0dc0a9cf9f5378ac0e"
+  dependencies:
+    zrender "3.7.4"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -5846,3 +5868,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+zrender@3.7.4:
+  version "3.7.4"
+  resolved "http://registry.npm.taobao.org/zrender/download/zrender-3.7.4.tgz#f847d53948481ef6d42906d1ea9aeec7acbefdf2"

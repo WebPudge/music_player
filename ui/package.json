@@ -10,7 +10,12 @@
     "react-scripts-ts": "2.8.0"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/echarts": "^0.0.9",
+    "@types/prop-types": "^15.5.2",
     "@types/react-redux": "^5.0.12",
+    "classnames": "^2.2.5",
+    "echarts": "^3.8.5",
     "immutable": "^3.8.2",
     "prop-types": "^15.6.0",
     "react": "^16.1.0",
