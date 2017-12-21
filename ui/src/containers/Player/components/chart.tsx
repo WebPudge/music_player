@@ -1,5 +1,5 @@
 import * as React from 'react';
-import WrappedHOC from '../../../components/WrappedHOC';
+import WrappedHOC from '../../../components/WrappedHOC/RndHOC';
 import Echart from '../../../components/Echart';
 
 class Chart extends React.Component<{}, {}> {
@@ -77,4 +77,4 @@ class Chart extends React.Component<{}, {}> {
   }
 }
 
-export default WrappedHOC(Chart);
+export default WrappedHOC(Chart, '.content');

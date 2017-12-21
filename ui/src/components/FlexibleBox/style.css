@@ -3,3 +3,37 @@
   width: auto;
   position: absolute;
 }
+
+.flexible-box .flexible-box-drager {
+  width: 10px;
+  height: 10px;
+  background: red;
+  cursor: move;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  transition: ease-in all .2s;
+}
+
+.flexible-box .flexible-box-drager:hover {
+  width: 16px;
+  height: 16px;
+}
+
+.flexible-box .flexible-box-scaler {
+  width: 10px;
+  height: 10px;
+  background: red;
+  cursor: move;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  transition: ease-in all .2s;
+}
+
+.flexible-box .flexible-box-scaler:hover {
+  width: 16px;
+  height: 16px;
+}

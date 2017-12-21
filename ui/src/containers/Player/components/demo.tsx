@@ -1,5 +1,5 @@
 import * as React from 'react';
-import WrappedHOC from '../../../components/WrappedHOC';
+import WrappedHOC from '../../../components/WrappedHOC/RndHOC';
 import * as PropTypes from 'prop-types';
 
 interface Props {
@@ -21,4 +21,4 @@ class Demo extends React.Component<Props, {}> {
   }
 }
 
-export default WrappedHOC(Demo);
+export default WrappedHOC(Demo, '.content');

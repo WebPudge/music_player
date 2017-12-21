@@ -93,8 +93,10 @@ class FlexibleBox extends React.Component<Props, State> {
     };
 
     return (
-      <div style={style} {...dragEnevts} className="flexible-box">
+      <div style={style} className="flexible-box">
+        <div {...dragEnevts} className="flexible-box-drager" />
         {this.props.children}
+        <div className="flexible-box-scaler" />
       </div>
     );
   }
